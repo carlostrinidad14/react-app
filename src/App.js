@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "./components/Container/Container";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { SiteNavbar } from "./components/SiteNavbar/SiteNavbar";
+import Alert from "react-bootstrap/Alert";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SiteNavbar />
+      <Container>
+       <ItemListContainer greeting="Bienvendios al Sitio"/>
+       <Alert variant="success">Alert de boostrap</Alert>
+      </Container>
     </div>
   );
 }
