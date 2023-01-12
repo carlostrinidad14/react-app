@@ -6,13 +6,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 export const SiteNavbar = () => {
   return (
     <header className="header">
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#">LOGO</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/">LOGO</Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,19 +23,41 @@ export const SiteNavbar = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Inicio</Nav.Link>
-              <Nav.Link href="#action2">Quienes Somos?</Nav.Link>
+              <Nav.Link>
+                <Link to="/">Inicio</Link>{" "}
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/about-us">Sobre Nosotros</Link>
+              </Nav.Link>
               <NavDropdown title="Categorías" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Categoría 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action6">Categoría 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action7">Categoría 3</NavDropdown.Item>
-                <NavDropdown.Item href="#action8">Categoría 4</NavDropdown.Item>
+                <NavDropdown.Item>
+                  {" "}
+                  <Link to="/productos/Diseño">Diseño</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  {" "}
+                  <Link to="/productos/Fotografía">Fotografía</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  {" "}
+                  <Link to="/productos/Tipografía">Tipografía</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  {" "}
+                  <Link to="/productos/Marketing">Marketing</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  {" "}
+                  <Link to="/productos/Programación">Programación</Link>
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action9">
-                  Todas las Categorías
+                <NavDropdown.Item>
+                  <Link to="/">Todas las Categorías</Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#action10">Contacto</Nav.Link>
+              <Nav.Link>
+                <Link to="/contacto">Contacto</Link>
+              </Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control

@@ -5,8 +5,8 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 export const CartWidget = (props) => {
   return (
     <div className="d-flex align-items-center">
-      <FontAwesomeIcon icon={faCartShopping} className="mx-3" />
-      <div>{props.qty}</div>
+      <FontAwesomeIcon icon={faCartShopping} className="mx-3" color="white" />
+      <div className="qtyCart">{props.qty}</div>
     </div>
   );
 };

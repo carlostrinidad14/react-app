@@ -1,0 +1,33 @@
+.itemListFlex {
+
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.btn {
+    border-radius: 0;
+    background-color: #00b2bd;
+    border: none;
+    color: #fff;
+
+    &:hover {
+        background-color: #029097;
+        color: #fff;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    h3 {
+        font-size: 18px;
+        color: #161616;
+
+        &:hover {
+            color: #f02d00;
+        }
+    }
+}
