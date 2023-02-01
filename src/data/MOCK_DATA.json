@@ -6,7 +6,8 @@
     "price": 121,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 710
+    "students": 710,
+    "stock": 20
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 152,
     "category": "Fotografía",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 845
+    "students": 845,
+    "stock": 20
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 92,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 987
+    "students": 987,
+    "stock": 20
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": 85,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 1418
+    "students": 1418,
+    "stock": 20
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": 296,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 203
+    "students": 203,
+    "stock": 20
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "price": 286,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 1185
+    "students": 1185,
+    "stock": 20
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "price": 215,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 536
+    "students": 536,
+    "stock": 20
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "price": 115,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 877
+    "students": 877,
+    "stock": 20
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "price": 160,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 555
+    "students": 555,
+    "stock": 20
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "price": 249,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 924
+    "students": 924,
+    "stock": 20
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "price": 141,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 457
+    "students": 457,
+    "stock": 20
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "price": 108,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 151
+    "students": 151,
+    "stock": 20
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "price": 102,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 270
+    "students": 270,
+    "stock": 20
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "price": 262,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 1106
+    "students": 1106,
+    "stock": 20
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "price": 213,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 1259
+    "students": 1259,
+    "stock": 20
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "price": 36,
     "category": "Fotografía",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 1327
+    "students": 1327,
+    "stock": 20
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "price": 165,
     "category": "Fotografía",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 702
+    "students": 702,
+    "stock": 20
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "price": 262,
     "category": "Fotografía",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 941
+    "students": 941,
+    "stock": 20
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "price": 206,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 971
+    "students": 971,
+    "stock": 20
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "price": 181,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 139
+    "students": 139,
+    "stock": 20
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "price": 53,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 1027
+    "students": 1027,
+    "stock": 20
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "price": 239,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 831
+    "students": 831,
+    "stock": 20
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "price": 178,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 492
+    "students": 492,
+    "stock": 20
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "price": 207,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 404
+    "students": 404,
+    "stock": 20
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "price": 265,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 959
+    "students": 959,
+    "stock": 20
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "price": 139,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 1492
+    "students": 1492,
+    "stock": 20
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "price": 167,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 637
+    "students": 637,
+    "stock": 20
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "price": 40,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 91
+    "students": 91,
+    "stock": 20
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "price": 284,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 652
+    "students": 652,
+    "stock": 20
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "price": 221,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 773
+    "students": 773,
+    "stock": 20
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "price": 254,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 1048
+    "students": 1048,
+    "stock": 20
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "price": 195,
     "category": "Tipografía",
     "image": "http://dummyimage.com/280x150.png/5fa2dd/ffffff",
-    "students": 258
+    "students": 258,
+    "stock": 20
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "price": 95,
     "category": "Fotografía",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 1081
+    "students": 1081,
+    "stock": 20
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "price": 225,
     "category": "Marketing",
     "image": "http://dummyimage.com/280x150.png/ff4444/ffffff",
-    "students": 263
+    "students": 263,
+    "stock": 20
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "price": 289,
     "category": "Programación",
     "image": "http://dummyimage.com/280x150.png/dddddd/000000",
-    "students": 145
+    "students": 145,
+    "stock": 20
   },
   {
     "id": 36,
@@ -321,6 +356,7 @@
     "price": 52,
     "category": "Diseño",
     "image": "http://dummyimage.com/280x150.png/cc0000/ffffff",
-    "students": 1244
+    "students": 1244,
+    "stock": 20
   }
 ]

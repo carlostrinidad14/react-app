@@ -7,8 +7,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { useLoginContext } from "../../context/LoginContext";
 
 export const SiteNavbar = () => {
+  const { user, logout } = useLoginContext();
   return (
     <header className="header">
       <Navbar expand="lg">
@@ -24,31 +26,26 @@ export const SiteNavbar = () => {
               navbarScroll
             >
               <Nav.Link>
-                <Link to="/">Inicio</Link>{" "}
+                <Link to="/">Inicio</Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to="/about-us">Sobre Nosotros</Link>
               </Nav.Link>
-              <NavDropdown title="Categorías" id="navbarScrollingDropdown">
+              <NavDropdown title="Estilos" id="navbarScrollingDropdown">
                 <NavDropdown.Item>
-                  {" "}
-                  <Link to="/productos/Diseño">Diseño</Link>
+                  <Link to="/productos/Neipa">NEIPA</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  {" "}
-                  <Link to="/productos/Fotografía">Fotografía</Link>
+                  <Link to="/productos/Ipa">IPA</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  {" "}
-                  <Link to="/productos/Tipografía">Tipografía</Link>
+                  <Link to="/productos/Witbier">Witbier</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  {" "}
-                  <Link to="/productos/Marketing">Marketing</Link>
+                  <Link to="/productos/Saison">Saison</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  {" "}
-                  <Link to="/productos/Programación">Programación</Link>
+                  <Link to="/productos/Dubbel">Dubbel</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
@@ -68,7 +65,16 @@ export const SiteNavbar = () => {
               />
               <Button variant="outline-success">Buscar</Button>
             </Form>
-            <CartWidget qty="0" />
+            <Link to="/cart">
+              <CartWidget />
+            </Link>
+            <div className="header__container">
+              <p>Bienvenido: {user.email}</p>
+              <Link to="/ordenes">Mis Ordenes</Link>
+              <button className="btn btn-danger" onClick={logout}>
+                Logout
+              </button>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
