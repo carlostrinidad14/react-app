@@ -2,27 +2,18 @@ import "./ItemList.scss";
 
 import Item from "../Item/Item";
 
-
 export const ItemList = ({ productos, busqueda }) => {
   return (
-    <div className="container my-4 ">
+    <div className=" my-4 col-10">
       <h2>Catalogo de Cervezas</h2>
-      <hr />
+
       <div className="row">
-       
-        <section className="row my-4 ">
+        <section className="row my-4 d-flex flex-lg-wrap justify-content-around">
           {productos.map((prod) => (
             <Item key={prod.id} {...prod} />
           ))}
-
-          {/*   {busqueda
-            ? 
-            : busqueda.map((prod) => <Item key={prod.id} {...prod} />)} */}
         </section>
-        <hr />
-        <section>
-          <br />
-        </section>
+        <section></section>
       </div>
     </div>
   );

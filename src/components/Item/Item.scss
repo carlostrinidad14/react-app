@@ -5,16 +5,17 @@
     align-items: stretch;
     justify-content: space-between;
     flex-direction: column;
+    background-color: #f02d00;
 }
 
 .btn {
     border-radius: 0;
-    background-color: #00b2bd;
+    background-color: #3A86FF;
     border: none;
     color: #fff;
 
     &:hover {
-        background-color: #029097;
+        background-color: #FF006E;
         color: #fff;
     }
 }
@@ -30,4 +31,16 @@ a {
             color: #f02d00;
         }
     }
+}
+
+.itemProducto {
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    img {
+        border-radius: 10px;
+    }
+
+
 }

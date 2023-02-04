@@ -1,16 +1,17 @@
 import "./SiteNavbar.scss";
-import Button from "react-bootstrap/Button";
+
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
+
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../context/LoginContext";
+import { auth } from "../../firebase/config";
 
 export const SiteNavbar = () => {
-  const { user, logout } = useLoginContext();
+  const { logout } = useLoginContext();
   return (
     <header className="header">
       <Navbar expand="lg">
@@ -56,24 +57,22 @@ export const SiteNavbar = () => {
                 <Link to="/contacto">Contacto</Link>
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Buscar"
-                className="me-2"
-                aria-label="Buscar"
-              />
-              <Button variant="outline-success">Buscar</Button>
-            </Form>
-            <Link to="/cart">
-              <CartWidget />
-            </Link>
-            <div className="header__container">
-              <p>Bienvenido: {user.email}</p>
-              <Link to="/ordenes">Mis Ordenes</Link>
-              <button className="btn btn-danger" onClick={logout}>
-                Logout
-              </button>
+            <div className="headerRight">
+              <div className="px-3">
+                <h5>Bienvenido: {auth.currentUser.displayName}</h5>
+                <Link to="/ordenes">Mis Ordenes</Link>
+              </div>
+              <div className="px-3">
+                {" "}
+                <Link to="/cart">
+                  <CartWidget />
+                </Link>
+              </div>
+              <div className="px-3">
+                <button className="btn btn-danger" onClick={logout}>
+                  Logout
+                </button>
+              </div>
             </div>
           </Navbar.Collapse>
         </Container>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
+import { WishIcon } from "../WishIcon/WishIcon";
 
 export const ItemDetail = ({
   id,
@@ -43,43 +44,57 @@ export const ItemDetail = ({
 
   return (
     <section className="itemDetail">
-      <div className="row">
-        <div className="col-sm">
-          <img alt={title} src={image} className="w-100" />
+      {title ? (
+        <div>
+          <div className="row">
+            <div className="col-sm">
+              <img alt={title} src={image} className="w-100" />
+            </div>
+            <div className="col-sm">
+              <div className="d-flex align-items-center ">
+                <h2>{title} </h2>
+                <WishIcon id={id} />
+              </div>
+              <small>{description}</small>
+              <br />
+              <div className="d-flex align-items-center justify-content-between">
+                {" "}
+                <p className="fs4 fw-bold my-3">
+                  Categoría:{" "}
+                  <Link to={`../productos/${category}`}> {category}</Link>
+                </p>
+                <h3>
+                  Precio: $<b>{price}</b>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row my-5">
+            <button className="btn" onClick={handleVolver}>
+              <FontAwesomeIcon icon={faArrowLeft} className="mx-3" />
+              Volver
+            </button>
+
+            {!isInCart(id) ? (
+              <ItemCount
+                cantidad={cantidad}
+                setCantidad={setCantidad}
+                max={stock}
+                onAdd={handleAgregar}
+              />
+            ) : (
+              <Link to="/cart" className="btn btn-success">
+                Terminar mi compra / Ya tienes este curso en el carro
+              </Link>
+            )}
+          </div>
         </div>
-        <div className="col-sm">
-          <h2>{title}</h2>
-          <small>{description}</small>
-          <br />
-          <small>
-            Categoría: <Link to={`../productos/${category}`}> {category}</Link>
-          </small>
-
-          <h3>
-            Precio: $<b>{price}</b>
-          </h3>
-        </div>
-      </div>
-
-      <div className="row my-5">
-        <button className="btn" onClick={handleVolver}>
-          <FontAwesomeIcon icon={faArrowLeft} className="mx-3" />
-          Volver
-        </button>
-
-        {!isInCart(id) ? (
-          <ItemCount
-            cantidad={cantidad}
-            setCantidad={setCantidad}
-            max={stock}
-            onAdd={handleAgregar}
-          />
-        ) : (
-          <Link to="/cart" className="btn btn-success">
-            Terminar mi compra / Ya tienes este curso en el carro
-          </Link>
-        )}
-      </div>
+      ) : (
+        <h1 className="text-center text-danger vh-100">
+          No Existe el Producto
+        </h1>
+      )}
     </section>
   );
 };

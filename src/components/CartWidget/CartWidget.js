@@ -3,12 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useCartContext } from "../../context/CartContext";
 
-
-
-
 export const CartWidget = () => {
-
-  const { totalCantidad } = useCartContext()
+  const { totalCantidad } = useCartContext();
 
   return (
     <div className="d-flex align-items-center">

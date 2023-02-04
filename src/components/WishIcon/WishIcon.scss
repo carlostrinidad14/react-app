@@ -1,0 +1,42 @@
+.icon-wishlist {
+  cursor: pointer;
+  width: 22px;
+  height: 21px;
+  opacity: .5;
+  background:
+
+    url('https://firebasestorage.googleapis.com/v0/b/react-app-15cd8.appspot.com/o/heart-regular.svg?alt=media&token=0e93a2da-473c-4731-a654-0c6b137e138f');
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.in-wishlist {
+    opacity: 1;
+    animation-name: wishlist-ani;
+    animation-duration: 1000ms;
+    background-repeat: no-repeat;
+    background:
+
+      url('https://firebasestorage.googleapis.com/v0/b/react-app-15cd8.appspot.com/o/heart-solid.svg?alt=media&token=b9beb0b4-8681-49f9-b401-b2943b0f8d9d');
+
+  }
+}
+
+@keyframes wishlist-ani {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(.5);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

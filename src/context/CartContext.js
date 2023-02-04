@@ -10,7 +10,6 @@ const init = JSON.parse(localStorage.getItem("cart")) || [];
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(init);
-  console.log(cart);
 
   const agregarAlCarrito = (item) => {
     setCart([...cart, item]);
@@ -29,7 +28,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const totalCart = () => {
-    return cart.reduce((acc, item) => acc + item.price*item.cantidad, 0);
+    return cart.reduce((acc, item) => acc + item.price * item.cantidad, 0);
   };
 
   const totalCantidad = () => {

@@ -9,17 +9,16 @@ export const ItemDetailContainer = () => {
   const { itemId } = useParams();
 
   useEffect(() => {
-  
-    const docRef = doc(db, "productos", itemId)
+    const docRef = doc(db, "productos", itemId);
 
-    getDoc(docRef)
-    .then(doc=>{
-      setItem({...doc.data(), id:doc.id})
-    })
-
+    getDoc(docRef).then((doc) => {
+      setItem({ ...doc.data(), id: doc.id });
+    });
   }, [itemId]);
 
   return (
-    <div className="container my-5 col-10">{item && <ItemDetail {...item} />}</div>
+    <div className="container my-5 col-10">
+      {item && <ItemDetail {...item} />}
+    </div>
   );
 };

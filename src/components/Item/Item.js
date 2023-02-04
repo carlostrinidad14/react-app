@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { useCartContext } from "../../context/CartContext";
+import { WishIcon } from "../WishIcon/WishIcon";
 
 const Item = ({ title, image, description, price, category, id, stock }) => {
   const { agregarAlCarrito, isInCart } = useCartContext();
@@ -27,19 +28,24 @@ const Item = ({ title, image, description, price, category, id, stock }) => {
   };
   const cantidad = 1;
   return (
-    <div className="col-3 my-3 d-flex itemListFlex">
+    <div className="col-3 mx-2 py-3 my-2 itemProducto">
       <Link to={`/detail/${id}`}>
         <img src={image} alt={title} className="mx-auto d-block img-fluid" />
       </Link>
-      <Link to={`/detail/${id}`}>
-        <h3 className="my-2">{title}</h3>
-      </Link>
+      <div className="d-flex align-items-center justify-content-between">
+        <Link to={`/detail/${id}`}>
+          <h3 className="my-2 text-center">{title}</h3>
+        </Link>
+        <WishIcon id={id} />
+      </div>
       <row>
-        <div className="col">
-          <FontAwesomeIcon icon={faTag} /> Estilo:
-          <Link to={`../productos/${category}`}> {category}</Link>
+        <div className="col d-flex flex-wrap justify-content-around">
+          <div>
+            <FontAwesomeIcon icon={faTag} /> Estilo:
+            <Link to={`../productos/${category}`}> {category}</Link>
+          </div>
+          <div className="fw-bold">$ {price}</div>
         </div>
-        <div className="col" >$ {price}</div>
       </row>
 
       <row>
@@ -55,11 +61,11 @@ const Item = ({ title, image, description, price, category, id, stock }) => {
           {!isInCart(id) ? (
             <button className="btn" onClick={handleAgregar}>
               <FontAwesomeIcon icon={faCartShopping} className="mx-3" />
-              Agregar 1 Al carrito
+              Agregar Al carrito
             </button>
           ) : (
             <Link to="/cart" className="btn btn-success">
-              Terminar mi compra / Ya tienes este curso en el carro
+              Ver carrito
             </Link>
           )}
         </div>

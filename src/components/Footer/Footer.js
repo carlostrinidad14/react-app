@@ -34,8 +34,8 @@ export const Footer = () => {
             <li>
               <Link to="/productos/Programación">Programación</Link>
             </li>
-          <hr/>
-          <li>
+            <hr />
+            <li>
               <Link to="/">Todas las Categorías</Link>
             </li>
           </ul>
@@ -52,6 +52,5 @@ export const Footer = () => {
         </div>
       </footer>
     </div>
-    
   );
 };

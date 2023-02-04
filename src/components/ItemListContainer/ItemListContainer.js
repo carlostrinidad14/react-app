@@ -21,19 +21,16 @@ export const ItemListContainer = () => {
   const productosRef = collection(db, "productos");
   const q = categoryId
     ? query(productosRef, where("category", "==", categoryId))
-    : query(productosRef, orderBy("price"), limit(8));
+    : query(productosRef, orderBy("price"), limit(9));
 
   const [lastVisible, setLastVisible] = useState(true);
   const [busqueda, setBusqueda] = useState(0);
-
 
   let precioMaximo = 0;
   let precioMinimo = 0;
 
   useEffect(() => {
     buscar();
-    
-   
   }, [busqueda]);
 
   useEffect(() => {
@@ -55,11 +52,11 @@ export const ItemListContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [ categoryId]);
+  }, [categoryId]);
 
   const fetchMore = () => {
     getDocs(
-      query(productosRef, orderBy("price"), startAfter(lastVisible), limit(4))
+      query(productosRef, orderBy("price"), startAfter(lastVisible), limit(3))
     ).then((resp) => {
       setProductos(
         productos.concat(
@@ -73,6 +70,7 @@ export const ItemListContainer = () => {
       );
       const lastVisible = resp.docs[resp.docs.length - 1];
       setLastVisible(lastVisible);
+      buscar();
     });
   };
 
@@ -85,7 +83,6 @@ export const ItemListContainer = () => {
         where("price", ">=", precioMinimo)
       )
     ).then((resp) => {
-     
       setProductos(
         resp.docs.map((doc) => {
           return {
@@ -94,7 +91,6 @@ export const ItemListContainer = () => {
           };
         })
       );
-      
     });
   };
 
@@ -103,15 +99,14 @@ export const ItemListContainer = () => {
 
   const datosFiltro = (childdata) => {
     setBusqueda(childdata);
-    
   };
 
   return (
-    <div className={loading ? "vh-100" : ""}>
+    <div className={loading ? "vh-100" : "" + "row"}>
       {categoryId ? (
         <div></div>
       ) : (
-        <ItemFilter /* productos={productos} */ datosFiltro={datosFiltro} />
+        <ItemFilter datosFiltro={datosFiltro} />
       )}
 
       {loading ? (
@@ -125,8 +120,9 @@ export const ItemListContainer = () => {
         disabled={
           categoryId || productosRef.length >= productos.length ? true : false
         }
+        className="btn btn-primary"
       >
-        fetch more
+        Cargas Más
       </button>
     </div>
   );
