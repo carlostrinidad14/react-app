@@ -21,7 +21,7 @@ export const WishIcon = ({ id }) => {
     } else {
       setActivo("in-wishlist");
     }
-  }, []);
+  }, [id,isWishlist]);
 
   return (
     <div

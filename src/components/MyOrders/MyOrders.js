@@ -34,7 +34,7 @@ const MyOrders = () => {
       })
 
       .finally(() => {});
-  }, [ordenId]);
+  }, [ordenId,docRef]);
 
   useEffect(() => {}, [ordenData]);
 

@@ -102,7 +102,7 @@ export const ItemListContainer = () => {
   };
 
   return (
-    <div className={loading ? "vh-100" : "" + "row"}>
+    <div className={loading ? "vh-100" : "row"}>
       {categoryId ? (
         <div></div>
       ) : (
