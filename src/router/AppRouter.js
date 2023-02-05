@@ -8,7 +8,7 @@ const AppRouter = () => {
   const { user } = useLoginContext();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {user.logged ? <PrivateRoutes /> : <PublicRoutes />}
     </BrowserRouter>
   );

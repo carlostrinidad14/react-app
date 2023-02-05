@@ -16,7 +16,7 @@ const PrivateRoutes = () => {
       <SiteNavbar />
       <Container>
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" exact element={<ItemListContainer />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route
