@@ -8,9 +8,9 @@ const AppRouter = () => {
   const { user } = useLoginContext();
 
   return (
-    <HashRouter>
+    <Router>
       {user.logged ? <PrivateRoutes /> : <PublicRoutes />}
-    </HashRouter>
+    </Router>
   );
 };
 
