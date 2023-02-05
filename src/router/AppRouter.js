@@ -10,6 +10,7 @@ const AppRouter = () => {
   return (
     <Router>
       {user.logged ? <PrivateRoutes /> : <PublicRoutes />}
+      
     </Router>
   );
 };
