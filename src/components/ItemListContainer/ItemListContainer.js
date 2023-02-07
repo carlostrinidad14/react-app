@@ -70,7 +70,7 @@ export const ItemListContainer = () => {
       );
       const lastVisible = resp.docs[resp.docs.length - 1];
       setLastVisible(lastVisible);
-      buscar();
+     
     });
   };
 

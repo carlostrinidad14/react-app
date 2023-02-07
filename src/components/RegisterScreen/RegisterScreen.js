@@ -38,13 +38,13 @@ const RegisterScreen = () => {
 
   return (
     <div className="login-screen">
-      <div className="login">
+      <div className="login card shadow-lg">
         <h2>Register</h2>
-        <hr />
+    
 
         <form onSubmit={handleSubmit}>
           <input
-            className="form-control my-2"
+            className="form-control my-3"
             type="text"
             value={values.name}
             onChange={handleInputChange}
@@ -53,7 +53,7 @@ const RegisterScreen = () => {
           />
 
           <input
-            className="form-control my-2"
+            className="form-control my-3"
             type="email"
             value={values.email}
             onChange={handleInputChange}
@@ -61,7 +61,7 @@ const RegisterScreen = () => {
             placeholder="Email"
           />
           <input
-            className="form-control my-2"
+            className="form-control my-3"
             type="password"
             value={values.password}
             onChange={handleInputChange}
@@ -69,7 +69,7 @@ const RegisterScreen = () => {
             placeholder="Contraseña"
           />
           <input
-            className="form-control my-2"
+            className="form-control my-3"
             type="password"
             value={values.password2}
             onChange={handleInputChange}
@@ -78,11 +78,11 @@ const RegisterScreen = () => {
           />
 
           <button className="btn btn-primary" disabled={loading}>
-            {loading ? "Cargando..." : "Ingresar"}
+            {loading ? "Cargando..." : "Registrar"}
           </button>
           {user.error && <p className="error">{user.error}</p>}
         </form>
-        <Link to="/login">Ya estoy registrado</Link>
+        <Link to="/login" className="my-3">Ya estoy registrado</Link>
       </div>
     </div>
   );

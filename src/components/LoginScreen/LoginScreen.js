@@ -26,7 +26,7 @@ const LoginScreen = () => {
 
   return (
     <div className="login-screen">
-      <div className="login">
+      <div className="login card shadow-lg">
         <h2>Login</h2>
         <hr />
 
@@ -51,7 +51,6 @@ const LoginScreen = () => {
           </button>
           {user.error && <p className="error">{user.error}</p>}
         </form>
-        {/* <button className='btn btn-primary my-2' onClick={googleLogin}>Ingresar con google</button> */}
         <br />
         <Link to="/register">Registrarme</Link>
       </div>

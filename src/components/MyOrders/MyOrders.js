@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from "react";
 import { useLoginContext } from "../../context/LoginContext";
 import { db } from "../../firebase/config";
+import "./MyOrders.scss";
 
 const MyOrders = () => {
   const { user } = useLoginContext();
@@ -18,15 +19,13 @@ const MyOrders = () => {
 
   const ordersRef = collection(db, "orders");
   const q = query(ordersRef, where("cliente.email", "==", user.email));
-  const docRef = doc(db, "orders", ordenId);
 
   const handleOrden = (e) => {
-    /* console.log(e.target.id); */
     setOrdenId(e.target.id);
   };
 
   useEffect(() => {
-    getDoc(docRef)
+    getDoc(doc(db, "orders", ordenId))
       .then((resp) => {
         console.log(ordenId);
         console.log(resp.data());
@@ -34,7 +33,7 @@ const MyOrders = () => {
       })
 
       .finally(() => {});
-  }, [ordenId,docRef]);
+  }, [ordenId]);
 
   useEffect(() => {}, [ordenData]);
 
@@ -56,31 +55,47 @@ const MyOrders = () => {
   return (
     <div className="container my-4 ">
       <h1>Mis ordenes</h1>
-      {ordenes.map((item) => (
-        <div>
-          <p>
-            Orden de compra:{" "}
-            <span onClick={handleOrden} id={item.id}>
-              {item.id}
-            </span>{" "}
-            - Total de la compra ${item.total} - Estado: {item.estado}
-          </p>
-          {/* <p>Nombre {item.cliente.nombre}</p> */}
-        </div>
-      ))}
-
+      <div className="d-flex">
+        {ordenes.map((item) => (
+          <div className="p-3 m-3 shadow bradius ">
+            <div className="my-2">
+              Orden de compra{" "}
+              <div>
+                <span onClick={handleOrden} id={item.id} className="linkOrden">
+                  {item.id}
+                </span>
+              </div>
+            </div>
+            <div className="my-2">Total de la compra ${item.total} </div>
+            <div className="my-2">Estado: {item.estado}</div>
+          </div>
+        ))}
+      </div>
+      <hr></hr>
+      <h3>Detalle de la orden:</h3>
       {ordenData ? (
         ordenData.map((item) => (
-          <div>
-            <img src={item.image} alt={item.title}></img>
-            <p>Item:{item.title}</p>
-            <p>precio:{item.price}</p>
-            <p>Cantidad:{item.cantidad}</p>
-            <p>Estilo-:{item.category}</p>
+          <div className="d-flex align-items-center justify-content-center ">
+            <div className="col-3">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="img-thumbnail"
+                width={200}
+              ></img>
+            </div>
+            <div className="col-3">
+              <div className="fw-bold fs-5">{item.title}</div>
+              <div className="fw-bold fs-6">Estilo: {item.category}</div>
+            </div>
+            <div className="col-3">
+              <div>Precio: {item.price}</div>
+              <div>Cantidad: {item.cantidad}</div>
+            </div>
           </div>
         ))
       ) : (
-        <p>Seleccione Id para mostrar detalle</p>
+        <div className="orderDetail">Seleccione ID en el listado de arriba para mostrar detalle</div>
       )}
     </div>
   );
